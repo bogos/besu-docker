@@ -76,17 +76,17 @@ function restartNode() {
 
 function generatateKey() {
   echo "key generation"
-  docker container run -v `pwd`/keys/besu:/data -w /data -it --rm hyperledger/besu:1.4.3 --data-path=/data public-key export --to=/data/key.pub
+  docker container run -v `pwd`/keys/besu:/data -w /data -it --rm hyperledger/besu:1.4.3 --data-path=/data public-key export-address --to=/data/key.pub
 }
 
 if [ "$1" = "-m" ]; then # supports old usage, muscle memory is powerful!
   shift
-fi
+fi-it
 MODE=$1
 shift
 
 # Determine the mode
-if [ "$MODE" == "up" ]; then
+if [ "$MODE" == "up" ]; then~
   upNode
 elif [ "$MODE" == "down" ]; then
   downNode
