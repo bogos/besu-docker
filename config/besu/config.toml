@@ -1,4 +1,4 @@
-data-path="/opt/other/besu/data"
+data-path="/opt/besu/data"
 genesis-file="/config/besu/genesis.json"
 min-gas-price=0
 host-whitelist=["*"]
