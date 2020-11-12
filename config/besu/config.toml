@@ -1,0 +1,10 @@
+data-path="/opt/other/besu/data"
+genesis-file="/config/besu/genesis.json"
+min-gas-price=0
+host-whitelist=["*"]
+rpc-ws-enabled=true
+rpc-http-enabled=true
+rpc-http-host="0.0.0.0"
+rpc-http-cors-origins=["all"]
+rpc-http-api=["ETH","NET","IBFT","WEB3","ADMIN"]
+logging="DEBUG"

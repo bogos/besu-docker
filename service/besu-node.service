@@ -1,0 +1,13 @@
+[Unit]
+Description=besu node service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=<path to cloned repo>/alastria-regular-node-besu/node.sh resume
+ExecStop=<path to cloned repo>/alastria-regular-node-besu/node.sh pause
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

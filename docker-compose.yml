@@ -1,0 +1,19 @@
+version: "3"
+services:
+  besu:
+    image: hyperledger/besu:1.4.3
+    container_name: besu
+    environment:
+      - BESU_P2P_HOST=${BESU_P2P_HOST}
+    ports:
+      - 30303:30303/udp
+      - 30303:30303/tcp
+      - 8545:8545
+      - 9545:9545
+    volumes:
+      - ./config/besu:/config/besu/
+      - ./keys/besu/key:/opt/besu/data/key
+      - besu-database:/opt/besu/data/database
+    command: ["--config-file=/config/besu/config.toml"]
+volumes:
+  besu-database:
