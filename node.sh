@@ -81,12 +81,12 @@ function generatateKey() {
 
 if [ "$1" = "-m" ]; then # supports old usage, muscle memory is powerful!
   shift
-fi-it
+fi
 MODE=$1
 shift
 
 # Determine the mode
-if [ "$MODE" == "up" ]; then~
+if [ "$MODE" == "up" ]; then
   upNode
 elif [ "$MODE" == "down" ]; then
   downNode
