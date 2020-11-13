@@ -1,6 +1,4 @@
-# Alastria Besu Regular Node
-
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+# Besu Regular Node
 
 This repository is based on the [Alastria Node Besu](https://github.com/alastria/alastria-node-besu) repository. This repository contains code and documentations needed to deploy private besu node on Alastria Network B.
 
@@ -40,8 +38,6 @@ You need to install Docker and Docker Compose. I have put the [installation guid
    prometheus   /bin/prometheus --config.f ...   Up      0.0.0.0:9090->9090/tcp
    *************************************************************
    JSON-RPC HTTP service endpoint      : http://127.0.0.1:8545
-   Web block explorer address          : http://127.0.0.1:8080/
-   Prometheus address                  : http://127.0.0.1:9090/graph
    ```
 
 ## Registration
@@ -52,7 +48,6 @@ After successful deployment, you need to register the node to access the Alastri
    ```
    curl -X POST --data '{"jsonrpc":"2.0","method":"net_enode","params":[],"id":1}' http://127.0.0.1:8545
    ```
-2. Fill in the [electronic form](https://portal.r2docuo.com/alastria/forms/noderequest) and submit.
 
 ## Systemd Service
 
@@ -78,4 +73,4 @@ sudo systemctl status besu-node
 
 ## Usage
 
-You can interact with the besu node using [HTTP JSON RPC requests](https://besu.hyperledger.org/en/stable/Reference/API-Methods/) on port 8545. The Prometheus and Block Explorer dashboards can be accessed on http://127.0.0.1:9090 and http://127.0.0.1:8080 respectively.
+You can interact with the besu node using [HTTP JSON RPC requests](https://besu.hyperledger.org/en/stable/Reference/API-Methods/) on port 8545.

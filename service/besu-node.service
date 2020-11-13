@@ -5,8 +5,8 @@ After=docker.service
 
 [Service]
 Type=oneshot
-ExecStart=<path to cloned repo>/alastria-regular-node-besu/node.sh resume
-ExecStop=<path to cloned repo>/alastria-regular-node-besu/node.sh pause
+ExecStart=<path to cloned repo>/besu-docker/node.sh resume
+ExecStop=<path to cloned repo>/besu-docker/node.sh pause
 RemainAfterExit=true
 
 [Install]

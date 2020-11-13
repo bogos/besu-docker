@@ -9,7 +9,6 @@ services:
       - 30303:30303/udp
       - 30303:30303/tcp
       - 8545:8545
-      - 9545:9545
     volumes:
       - ./config/besu:/config/besu/
       - ./keys/besu/key:/opt/besu/data/key
